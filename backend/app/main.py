@@ -10,7 +10,7 @@ app = FastAPI(title="Machine Learning Calculator API")
 app.add_middleware(
     CORSMiddleware,
     allow_origins=["*"],  # Allow all origins
-    allow_credentials=False,  # Set to False when using wildcard
+    allow_credentials=True,  # Set to True when using wildcard
     allow_methods=["*"],
     allow_headers=["*"],
 )
