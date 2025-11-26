@@ -10,7 +10,7 @@ import { useToast } from "@/hooks/use-toast";
 import { Upload, Brain, BarChart3, Download } from "lucide-react";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
-const API_BASE_URL = "http://localhost:8000";
+const API_BASE_URL = "https://mlcalculator.onrender.com";
 
 const Dashboard = () => {
   const [file, setFile] = useState<File | null>(null);
@@ -56,7 +56,7 @@ const Dashboard = () => {
       console.error("Upload error:", error);
       toast({ 
         title: "Error", 
-        description: error.message || "Failed to upload dataset. Make sure the backend is running on http://localhost:8000", 
+        description: error.message || "Failed to upload dataset. Make sure the backend is running on https://mlcalculator.onrender.com", 
         variant: "destructive" 
       });
     } finally {
